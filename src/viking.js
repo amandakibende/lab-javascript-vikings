@@ -1,14 +1,14 @@
-const Viking =  {
-name: 'Odin',
-health : 100,
-strength : 50,
-}
+// const Viking =  {
+// name: 'Odin',
+// health : 100,
+// strength : 50,
+// }
 
-const Soldier =  {
-  name: 'Marie',
-  health : 200,
-  strength : 25,
-  }
+// const Soldier =  {
+//   name: 'Marie',
+//   health : 200,
+//   strength : 25,
+//   }
 
 // Soldier
 class Soldier {
@@ -55,15 +55,40 @@ receiveDamage(damage){
 }
 
 
-battleCry(){
-console.log('Odin Owns You All!');
-}
-
-
+battleCry() {
+  console.log("Odin Owns You All!");
+} 
 }
 
 // Saxon
-class Saxon {}
+class Saxon extends Soldier{
+
+  attack(){
+    return this.strength;
+  }
+
+
+receiveDamage(damage){
+  this.health = this.health - damage;
+
+  if (this.health <= 0){
+    console.log(`A Saxon has received ${this.damage} point of damage`);
+  }
+
+  if (this.damage > this.health){
+    console.log(`A Saxon has died in combat`);
+  }
+}
+}
+
+
+
+
+
+
+
+
+
 
 // War
 class War {}
