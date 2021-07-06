@@ -1,20 +1,21 @@
-const Player1 = 
-{name: 'Paul',
+const Viking =  {
+name: 'Odin',
 health : 100,
 strength : 50,
 }
 
-
-
-
+const Soldier =  {
+  name: 'Marie',
+  health : 200,
+  strength : 25,
+  }
 
 // Soldier
 class Soldier {
   constructor (health, strength) {
-    this.health = health
-    this.strength = strength
-  }
-
+    this.health = health;
+    this.strength = strength;
+  } 
 attack (){
   return this.strength;
 }
@@ -23,7 +24,7 @@ receiveDamage(damage){
   this.health = this.health - damage; 
   if (this.health <=0){
 
-    console.log(`${this.health} W AS T E D`)
+    console.log(`${this.name} W A S T E D`);
   }
 }
 }
@@ -32,9 +33,9 @@ receiveDamage(damage){
 class Viking extends Soldier {
   constructor (name, health, strength){
   super(name);
-  this.name = name
-  this.health = health
-  this.strength = strength
+  this.name = name;
+  this.health = health;
+  this.strength = strength;
   }
 
 attack(){
@@ -43,10 +44,21 @@ attack(){
 
 receiveDamage(damage){
   this.health = this.health - damage;
-  if (this.health <=0){
-    console.log(`${this.name} received ${damage} points of damage`);
+
+  if (this.health <= 0){
+    console.log(`${this.name} has died in act of combat `);
+  }
+
+  if (this.damage >= 0){
+    console.log(`${this.name} has received ${this.damage} points of damage`);
   }
 }
+
+
+battleCry(){
+console.log('Odin Owns You All!');
+}
+
 
 }
 
