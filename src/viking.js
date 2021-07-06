@@ -1,15 +1,3 @@
-// const Viking =  {
-// name: 'Odin',
-// health : 100,
-// strength : 50,
-// }
-
-// const Soldier =  {
-//   name: 'Marie',
-//   health : 200,
-//   strength : 25,
-//   }
-
 // Soldier
 class Soldier {
   constructor (health, strength) {
@@ -90,17 +78,22 @@ console.log(saxon)
 
 
 
-
-
-
-
-
-
-
-
-
 // War
-class War {}
+
+
+
+class War {
+
+vikingArmy = [1]
+saxonArmy = []
+
+addViking(Viking){
+
+  for (let i=0; i<10; i++)
+  console.log(Viking)
+}
+
+}
 
 
 
