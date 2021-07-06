@@ -16,11 +16,14 @@ receiveDamage(damage){
     console.log(`${this.health} W AS T E D`)
   }
 }
-
 }
 
 // Viking
-class Viking {}
+class Viking extends Soldier {
+  constructor (name){
+  super(name);
+  }
+}
 
 // Saxon
 class Saxon {}
