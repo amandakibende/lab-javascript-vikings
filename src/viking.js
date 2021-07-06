@@ -24,7 +24,7 @@ receiveDamage(damage){
   this.health = this.health - damage; 
   if (this.health <=0){
 
-    console.log(`${this.name} W A S T E D`);
+    return `${this.name} W A S T E D`;
   }
 }
 }
@@ -46,18 +46,19 @@ receiveDamage(damage){
   this.health = this.health - damage;
 
   if (this.health <= 0){
-    console.log(`${this.name} has died in act of combat `);
+    return `${this.name} has died in act of combat`;
   }
 
-  if (this.damage >= 0){
-    console.log(`${this.name} has received ${this.damage} points of damage`);
-  }
+ 
+    return `${this.name} has received ${damage} points of damage`;
+ 
 }
 
 
 battleCry() {
-  console.log("Odin Owns You All!");
+  return "Odin Owns You All!"
 } 
+
 }
 
 // Saxon
@@ -72,14 +73,22 @@ receiveDamage(damage){
   this.health = this.health - damage;
 
   if (this.health <= 0){
-    console.log(`A Saxon has received ${this.damage} point of damage`);
+    return `A Saxon has died in combat`;
   }
 
-  if (this.damage > this.health){
-    console.log(`A Saxon has died in combat`);
+  if (damage > this.health){
+    return `A Saxon has received ${damage} points of damage`;
   }
 }
 }
+
+let saxon = new Saxon(100,300)
+saxon.receiveDamage(10)
+console.log(saxon)
+
+
+
+
 
 
 
